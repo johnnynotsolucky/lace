@@ -6,9 +6,6 @@
   "scripts": {
     "prettify": "prettier --write lib/**/*.js bin/**/*.js"
   },
-  "bin": {
-    "rx-micro": "./bin/rx-micro.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnnynotsolucky/rx-micro.git"
@@ -19,12 +16,8 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.13.4"
   },
-  "dependencies": {
-    "arg": "^2.0.0",
-    "chalk": "^2.4.1",
-    "is-stream": "^1.1.0",
-    "micro": "^9.3.2",
-    "rxjs": "^6.2.0"
+  "peerDependencies": {
+    "rxjs": "^6.x"
   },
   "bugs": {
     "url": "https://github.com/johnnynotsolucky/rx-micro/issues"
