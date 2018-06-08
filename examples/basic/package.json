@@ -1,0 +1,14 @@
+{
+  "name": "rx-micro-basic-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "backpack"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "backpack-core": "^0.7.0"
+  }
+}

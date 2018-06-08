@@ -2,14 +2,17 @@
   "name": "rx-micro",
   "version": "0.1.0",
   "description": "Reactive HTTP microservices",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "prettify": "prettier --write lib/**/*.js bin/**/*.js"
   },
   "bin": {
     "rx-micro": "./bin/rx-micro.js"
   },
-  "repository": "johnnynotsolucky/rx-micro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnynotsolucky/rx-micro.git"
+  },
   "author": "Tyrone Tudehope",
   "license": "MIT",
   "devDependencies": {
@@ -19,7 +22,15 @@
   "dependencies": {
     "arg": "^2.0.0",
     "chalk": "^2.4.1",
+    "is-stream": "^1.1.0",
     "micro": "^9.3.2",
     "rxjs": "^6.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/johnnynotsolucky/rx-micro/issues"
+  },
+  "homepage": "https://github.com/johnnynotsolucky/rx-micro#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
