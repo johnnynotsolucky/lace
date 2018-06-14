@@ -1,5 +1,5 @@
 {
-  "name": "rx-micro-echo-example",
+  "name": "lace-http-echo-example",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",

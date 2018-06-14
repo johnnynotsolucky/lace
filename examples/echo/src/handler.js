@@ -11,7 +11,7 @@ throwIfNotPost = ({ req }) => {
 
 parseBody = ({ req }) => from(getBody(req, { encoding: true }))
 
-module.exports = (request$) =>
+module.exports = request$ =>
   request$.pipe(
     tap(throwIfNotPost),
     map(parseBody),

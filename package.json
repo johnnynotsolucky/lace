@@ -1,5 +1,5 @@
 {
-  "name": "rx-micro",
+  "name": "lace-http",
   "version": "0.1.0",
   "description": "Reactive HTTP microservices",
   "main": "./lib/index.js",
@@ -8,10 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnnynotsolucky/rx-micro.git"
+    "url": "git+https://github.com/johnnynotsolucky/lace-http.git"
   },
   "author": "Tyrone Tudehope",
   "license": "MIT",
+  "dependencies": {
+    "is-stream": "^1.1.0"
+  },
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "prettier": "^1.13.4"
@@ -20,9 +23,9 @@
     "rxjs": "^6.x"
   },
   "bugs": {
-    "url": "https://github.com/johnnynotsolucky/rx-micro/issues"
+    "url": "https://github.com/johnnynotsolucky/lace-http/issues"
   },
-  "homepage": "https://github.com/johnnynotsolucky/rx-micro#readme",
+  "homepage": "https://github.com/johnnynotsolucky/lace-http#readme",
   "directories": {
     "lib": "lib"
   }

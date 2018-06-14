@@ -1,9 +1,9 @@
-_**rx-micro** — Reactive HTTP microservices_
+_**lace-http** — Reactive HTTP microservices_
 
 ## Install
 
 ```
-npm i rx-micro
+npm i lace-http
 ```
 
 ## Usage
