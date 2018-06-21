@@ -162,10 +162,9 @@ const serve = handler => {
     request$.subscribe(([{ req, res }, err, val]) => {
       if (err) {
         sendResponse(res, prepareErrorResponse(err))
-      } else {
-        if (val) {
-          sendResponse(res, prepareResponse(val))
-        }
+      } else if (val !== undefined) {
+        // Allow through all falsy values with the exception of `undefined`
+        sendResponse(res, prepareResponse(val))
       }
     })
 

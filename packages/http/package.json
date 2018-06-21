@@ -1,0 +1,25 @@
+{
+  "name": "@lace/http",
+  "version": "0.1.3",
+  "description": "Reactive HTTP microservices",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnynotsolucky/lace.git"
+  },
+  "author": "Tyrone Tudehope",
+  "license": "MIT",
+  "dependencies": {
+    "is-stream": "^1.1.0"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.x"
+  },
+  "bugs": {
+    "url": "https://github.com/johnnynotsolucky/lace/issues"
+  },
+  "homepage": "https://github.com/johnnynotsolucky/lace#readme",
+  "directories": {
+    "lib": "lib"
+  }
+}

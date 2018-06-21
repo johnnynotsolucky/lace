@@ -1,32 +1,13 @@
 {
-  "name": "lace-http",
-  "version": "0.1.3",
-  "description": "Reactive HTTP microservices",
-  "main": "./lib/index.js",
   "scripts": {
-    "prettify": "prettier --write lib/**/*.js bin/**/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johnnynotsolucky/lace-http.git"
-  },
-  "author": "Tyrone Tudehope",
-  "license": "MIT",
-  "dependencies": {
-    "is-stream": "^1.1.0"
+    "prettify": "prettier --write packages/**/*.js !packages/**/build/**/*.js"
   },
   "devDependencies": {
+    "lerna": "^2.11.0",
     "pre-commit": "^1.2.2",
-    "prettier": "^1.13.4"
+    "prettier": "^1.13.5"
   },
-  "peerDependencies": {
-    "rxjs": "^6.x"
-  },
-  "bugs": {
-    "url": "https://github.com/johnnynotsolucky/lace-http/issues"
-  },
-  "homepage": "https://github.com/johnnynotsolucky/lace-http#readme",
-  "directories": {
-    "lib": "lib"
-  }
+  "precommit": [
+    "prettify"
+  ]
 }
