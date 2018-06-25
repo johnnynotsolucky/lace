@@ -1,5 +1,5 @@
 const { createError } = require('../../../')
-const { from } = require('rxjs')
+const { from, pipe } = require('rxjs')
 const { tap, mergeMap } = require('rxjs/operators')
 const getBody = require('raw-body')
 
@@ -11,8 +11,7 @@ throwIfNotPost = ({ req }) => {
 
 parseBody = ({ req }) => from(getBody(req, { encoding: true }))
 
-module.exports = request$ =>
-  request$.pipe(
-    tap(throwIfNotPost),
-    mergeMap(parseBody)
-  )
+module.exports = pipe(
+  tap(throwIfNotPost),
+  mergeMap(parseBody),
+)

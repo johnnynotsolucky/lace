@@ -10,8 +10,5 @@
   "license": "MIT",
   "devDependencies": {
     "backpack-core": "^0.7.0"
-  },
-  "dependencies": {
-    "rxjs": "^6.2.0"
   }
 }
