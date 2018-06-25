@@ -23,7 +23,7 @@ const createServerObservable = onCreate =>
     }
   })
 
-  const prepareResponse = o => {
+const prepareResponse = o => {
   if (isResponseObject(o)) {
     return o
   }
@@ -116,28 +116,26 @@ class ResponseError extends Error {
 const createError = (code, message, originalError) =>
   new ResponseError(code, message, originalError)
 
-const mapToObservable = f => pipe((...x) => {
-  try {
-    const result = f(...x)
-    return result instanceof Observable
-        ? result
-        : of(result)
-  } catch (err) {
-    return throwError(err)
-  }
-})
+const mapToObservable = f =>
+  pipe((...x) => {
+    try {
+      const result = f(...x)
+      return result instanceof Observable ? result : of(result)
+    } catch (err) {
+      return throwError(err)
+    }
+  })
 
 const run = (handler, request$$) =>
   request$$.pipe(
     mergeMap(({ req, res }) =>
-      of({ req, res })
-        .pipe(
-          mapToObservable(handler),
-          map(val => [{ req, res }, null, val]),
-          catchError(err => of([{ req, res }, err, null]))
-        )
+      of({ req, res }).pipe(
+        mapToObservable(handler),
+        map(val => [{ req, res }, null, val]),
+        catchError(err => of([{ req, res }, err, null])),
+      ),
     ),
-    multicast(() => new Subject())
+    multicast(() => new Subject()),
   )
 
 const serve = handler => {
@@ -149,8 +147,8 @@ const serve = handler => {
           if (onListen) {
             onListen(server)
           }
-        })
-      )
+        }),
+      ),
     )
 
     request$.connect()
